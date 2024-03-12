@@ -13,6 +13,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        agendaThin: ["var(--font-agenda-thin)"],
+        agendaRegular: ["var(--font-agenda-regular)"],
+        agendaBold: ["var(--font-agenda-bold)"],
+        soleilLight: ["var(--font-soleil-light)"],
+        soleilRegular: ["var(--font-soleil-regular)"],
+        soleilBold: ["var(--font-soleil-bold)"],
+      },
     },
   },
   plugins: [],

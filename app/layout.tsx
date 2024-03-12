@@ -1,8 +1,34 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const agendaThin = localFont({
+  src: "../public/fonts/Agenda_Thin.otf",
+  variable: "--font-agenda-thin",
+});
+const agendaRegular = localFont({
+  src: "../public/fonts/Agenda_Regular.otf",
+  variable: "--font-agenda-regular",
+});
+const agendaBold = localFont({
+  src: "../public/fonts/Agenda_Bold.otf",
+  variable: "--font-agenda-bold",
+});
+const soleilLight = localFont({
+  src: "../public/fonts/Soleil_Light.otf",
+  variable: "--font-soleil-light",
+});
+const soleilRegular = localFont({
+  src: "../public/fonts/Soleil_Regular.otf",
+  variable: "--font-soleil-regular",
+});
+const soleilBold = localFont({
+  src: "../public/fonts/Soleil_Bold.otf",
+  variable: "--font-soleil-bold",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +41,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${agendaThin.variable} ${agendaRegular.variable} ${agendaBold.variable} ${soleilLight.variable} ${soleilRegular.variable} ${soleilBold.variable}`}
+    >
       <body className={inter.className}>{children}</body>
     </html>
   );
